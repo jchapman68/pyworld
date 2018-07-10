@@ -44,7 +44,8 @@ jobs:
       image_resource:
         type: docker-image
         source: 
-          repository: p0bailey/docker-flask
+          repository: python
+          tag: alpine
       inputs:
         - name: py-world-git           
       run:
