@@ -7,7 +7,10 @@ echo GREETING: $GREETING
 
 export PORT=8090
 
-py-world-git/web.py &
+cd py-world-git
+
+ls -la
+./web.py &
 
 curl -sSf "$URL:$PORT" | grep "$GREETING"
 
