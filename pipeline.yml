@@ -44,8 +44,11 @@ jobs:
       image_resource:
         type: docker-image
         source: 
-          repository: tutum/curl
+          repository: eamonwoortman/alpine-python-curl-zip
       inputs:
         - name: py-world-git           
       run:
         path: py-world-git/acceptancetest.sh
+        params:
+          URL: localhost
+          GREETING: 'Hello Joe'

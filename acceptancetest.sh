@@ -5,10 +5,13 @@ echo URL: $URL
 echo GREETING: $GREETING
 
 
-python -V
+export PORT=8080
+
 py-world-git/web.py &
 
-curl -sSf "$URL" | grep "$GREETING"
+curl -sSf "$URL:$PORT" | grep "$GREETING"
+
+echo $GREETING
 
 if [ $? != 0 ] 
 then 
