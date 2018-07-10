@@ -4,12 +4,13 @@ echo Inputs:
 echo URL: $URL
 echo GREETING: $GREETING
 
+pip install -r dependency
 
-export PORT=8090
+export PORT="8090"
 
 cd py-world-git
 
-./web.py &
+flask run --port=$PORT
 
 curl -sSf "$URL:$PORT" | grep "$GREETING"
 
