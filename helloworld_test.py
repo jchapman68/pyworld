@@ -8,4 +8,4 @@ import helloworld as hw
 
 def test_main():
     assert hw.test_greeting("foobar") == "foobar"
-    
+    assert hw.test_hello-world() == "Hello World"
