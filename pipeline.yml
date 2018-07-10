@@ -49,6 +49,6 @@ jobs:
         - name: py-world-git           
       run:
         path: py-world-git/acceptancetest.sh
-        params:
-          URL: localhost
-          GREETING: 'Hello Joe'
+      params:
+        URL: http://127.0.0.1
+        GREETING: 'Hello Joe'
