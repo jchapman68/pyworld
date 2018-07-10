@@ -9,7 +9,7 @@ export PORT=8090
 
 cd py-world-git
 
-./web.py
+./web.py &
 
 curl -sSf "$URL:$PORT" | grep "$GREETING"
 

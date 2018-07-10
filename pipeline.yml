@@ -44,7 +44,8 @@ jobs:
       image_resource:
         type: docker-image
         source: 
-          repository: eamonwoortman/alpine-python-curl-zip
+          repository: python
+          tag: 2.7-jessie
       inputs:
         - name: py-world-git           
       run:
