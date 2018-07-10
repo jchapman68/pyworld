@@ -4,12 +4,8 @@ echo Inputs:
 echo URL: $URL
 echo GREETING: $GREETING
 
-which python
 
-pwd
-
-ls -la
-
+python -V
 py-world-git/web.py &
 
 curl -sSf "$URL" | grep "$GREETING"
