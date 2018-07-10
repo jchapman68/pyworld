@@ -6,13 +6,12 @@ echo GREETING: $GREETING
 
 apk add --no-cache curl
 
+which python
 pwd
 
 ls -la
 
-wget "$URL" | grep "$GREETING"
-
-echo $GREETING
+curl -sSf "$URL" | grep "$GREETING"
 
 if [ $? != 0 ] 
 then 

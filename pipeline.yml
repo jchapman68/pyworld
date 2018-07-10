@@ -44,8 +44,7 @@ jobs:
       image_resource:
         type: docker-image
         source: 
-          repository: python
-          tag: alpine
+          repository: tutum/curl
       inputs:
         - name: py-world-git           
       run:
