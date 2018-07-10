@@ -4,12 +4,13 @@ echo Inputs:
 echo URL: $URL
 echo GREETING: $GREETING
 
-apk add --no-cache curl
-
 which python
+
 pwd
 
 ls -la
+
+py-world-git/web.py &
 
 curl -sSf "$URL" | grep "$GREETING"
 
