@@ -4,7 +4,7 @@ echo Inputs:
 echo URL: $URL
 echo GREETING: $GREETING
 
-export FLASK_APP=helloworld.py
+export FLASK_APP=web.py
 
 pwd
 
