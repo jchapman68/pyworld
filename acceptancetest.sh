@@ -10,7 +10,9 @@ pwd
 
 ls -la
 
-curl -sSf "$URL" | grep "$GREETING"
+wget "$URL" | grep "$GREETING"
+
+echo $GREETING
 
 if [ $? != 0 ] 
 then 
