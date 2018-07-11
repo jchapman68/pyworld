@@ -1,4 +1,4 @@
 source-url: https://github.com/jchapman68/pyworld.git
 app-host: https://josh.apps.devtest.onsclofo.uk
 app-url: "salutation"
-cf-api: josh.apps.devtest.onsclofo.uk
+cf-api: https://api.system.devtest.onsclofo.uk
