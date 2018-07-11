@@ -51,7 +51,7 @@ jobs:
       run:
         path: py-world-git/acceptancetest.sh
       params:
-        HOST: http://127.0.0.1
+        HOST: https://josh.apps.devtest.onsclofo.uk
         URL: "greeting"
         NAME: "Rhi"
         
