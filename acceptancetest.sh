@@ -15,9 +15,9 @@ cd py-world-git
 pip install -r requirements
 
 nohup flask run --port=$PORT & > /dev/null 2>&1
-sleep 5
+sleep 2
 
-curl -sSf "$HOST:$PORT/$URL/$NAME" | grep "$NAME"
+NAME=$(curl -sSf "$HOST:$PORT/$URL/$NAME" | grep "$NAME")
 
 echo $NAME
 
