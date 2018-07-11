@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -eu
-
 echo Inputs:
 echo URL: $URL
 echo GREETING: $GREETING
@@ -19,6 +17,8 @@ sleep 1
 curl -sSf "$URL:$PORT" | grep "$GREETING"
 
 echo $GREETING
+
+set -eu
 
 if [ $? != 0 ] 
 then 
