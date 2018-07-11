@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eu
+
 echo Inputs:
 echo HOST: $HOST
 echo URL: $URL
@@ -18,8 +20,6 @@ sleep 5
 curl -sSf "$HOST:$PORT/$URL/$NAME" | grep "$NAME"
 
 echo $NAME
-
-set -eu
 
 if [ $? != 0 ] 
 then 
