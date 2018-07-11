@@ -9,10 +9,10 @@ export PORT="8090"
 
 cd py-world-git
 
-pip install -r dependency
+pip install -r requirements
 
-flask run --port=$PORT &
-
+nohup flask run --port=$PORT & > /dev/null 2>&1
+curl -sSf "$URL:$PORT"
 curl -sSf "$URL:$PORT" | grep "$GREETING"
 
 echo $GREETING
