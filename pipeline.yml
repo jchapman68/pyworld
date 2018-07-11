@@ -5,6 +5,14 @@ resources:
     uri: ((source-url))
     branch: ((branch))
 
+- name: cf-devtest
+  type: cf
+  source:
+    api: ((cf-api))
+    username: ((username))
+    password: ((password))
+    organization: paas
+    space: josh
 
 jobs:
 - name: get-resource
@@ -33,12 +41,23 @@ jobs:
         args: 
         dir: py-world-git
 
+- name: deploy-app
+  public: true
+  plan:
+  - get: py-world-git
+    passed: [unit-test]
+    trigger: true
+  - put: cf-devtest
+    params:
+      manifest: py-world-git/manifest.yml
+      path: py-world-git
+
 - name: acceptance-test
   public: true
   plan:
   - get: py-world-git
     trigger: true
-    passed: [unit-test]
+    passed: [deploy-app]
   - task: acceptance-test
     config:
       platform: linux

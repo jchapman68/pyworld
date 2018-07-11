@@ -1,0 +1,7 @@
+applications:
+- name: py-world
+  instances: 1
+  memory: 32M
+  routes:
+  - route: josh.apps.devtest.onsclofo.uk
+  buildpack: python_buildpack
