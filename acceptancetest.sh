@@ -12,8 +12,9 @@ cd py-world-git
 pip install -r requirements
 
 nohup flask run --port=$PORT & > /dev/null 2>&1
+sleep 5
 cat nohup.out
-lsof -i :8090
+
 
 curl -sSf "$URL:$PORT"
 curl -sSf "$URL:$PORT" | grep "$GREETING"
