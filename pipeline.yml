@@ -2,8 +2,9 @@ resources:
 - name: py-world-git
   type: git
   source:
-    uri: https://github.com/jchapman68/pyworld.git
-    branch: master
+    uri: ((source-url))
+    branch: ((branch))
+
 
 jobs:
 - name: get-resource
@@ -51,7 +52,7 @@ jobs:
       run:
         path: py-world-git/acceptancetest.sh
       params:
-        HOST: https://josh.apps.devtest.onsclofo.uk
-        URL: "greeting"
+        HOST: ((app-host))
+        URL: ((app-url))
         NAME: "Rhi"
         
