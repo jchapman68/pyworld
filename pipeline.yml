@@ -52,4 +52,6 @@ jobs:
         path: py-world-git/acceptancetest.sh
       params:
         URL: http://127.0.0.1
-        GREETING: 'Hello Joe'
+        PATH: "greeting"
+        NAME: "Rhi"
+        

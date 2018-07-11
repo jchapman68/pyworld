@@ -15,6 +15,8 @@ PORT = int(os.getenv("PORT", 9099))
 from flask import Flask
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
+import helloworld as hw
+
+@app.route('/greeting/<name>')
+def hello_world(name):
+    return hw.test_greeting(name)

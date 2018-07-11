@@ -1,3 +1,4 @@
 [
-  "helloworld_test.py::test_main"
+  "helloworld_test.py::test_main",
+  "helloworld_test.py::test_message"
 ]

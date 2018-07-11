@@ -10,9 +10,9 @@ import os
 #print os.environ["GREETING"]
 #print("Goodbye, World!")
 
-def test_greeting(x):
-    if x == "foobar":
-        return x
+def test_greeting(message):
+    if message == "foobar":
+        return message
     else:
-        return "foo"
+        return "Hello {}".format(message)
 
