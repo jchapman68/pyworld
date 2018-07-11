@@ -1,8 +1,8 @@
 #!/bin/sh
 
 echo Inputs:
+echo HOST: $HOST
 echo URL: $URL
-echo PATH: $PATH
 echo NAME: $NAME
 
 export FLASK_APP=web.py
@@ -15,7 +15,7 @@ pip install -r requirements
 nohup flask run --port=$PORT & > /dev/null 2>&1
 sleep 5
 
-curl -sSf "$URL:$PORT/$PATH/$NAME" | grep "$NAME"
+curl -sSf "$HOST:$PORT/$URL/$NAME" | grep "$NAME"
 
 echo $NAME
 
