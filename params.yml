@@ -1,4 +1,4 @@
 branch: master
 source-url: https://github.com/jchapman68/pyworld.git
 app-host: https://josh.apps.devtest.onsclofo.uk
-app-url: "greeting"
+app-url: "salutation"
